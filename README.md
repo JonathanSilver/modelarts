@@ -22,10 +22,10 @@
 
 ## 解答
 
-本repo提供的解答位于[solutions](/solutions)中，详细参考[readme](/solutions/README.md)。
+本repo提供的解答位于[solutions](/solutions)。
 
 
 ## ModelArts的使用
 
-1. 开发环境Notebooks的使用样例参考[readme](/notebook/README.md)。
-2. 训练、部署模型参考[readme](/model/README.md)。
+1. 开发环境Notebooks的使用参考[notebook](/notebook)。
+2. 训练、部署模型参考[model](/model)。
