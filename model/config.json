@@ -1,0 +1,62 @@
+{
+    "model_type": "PyTorch",
+    "model_algorithm": "classification",
+    "runtime": "python3.6",
+    "apis": [{
+        "protocol": "http",
+        "url": "/",
+        "method": "post",
+        "request": {
+            "Content-type": "application/json",
+            "data": {
+                "type": "object",
+                "properties": {
+                    "sample": {
+                        "type": "array",
+                        "minItems": 20,
+                        "items": [{
+                            "type": "array",
+                            "minItems": 228,
+                            "maxItems": 228,
+                            "items": [{
+                                "type": "array",
+                                "minItems": 4,
+                                "maxItems": 4,
+                                "items": [{
+                                    "type": "string"
+                                }]
+                            }]
+                        }]
+                    }
+                }
+            }
+        },
+        "response": {
+            "Content-type": "application/json",
+            "data": {
+                "type": "object",
+                "properties": {
+                    "sample": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }],
+    "dependencies": [{
+        "installer": "pip",
+        "packages": [{
+                "package_name": "scipy"
+            }
+        ]
+    },
+    {
+        "installer": "pip",
+        "packages": [{
+                "restraint": "EXACT",
+                "package_name": "scikit-learn",
+                "package_version": "0.19.1"
+            }
+        ]
+    }]
+}
